@@ -46,6 +46,8 @@ const SignUp = props => {
             .then(res => {
               console.log("SUCCESSFUL", res);
               setUser(res.data);
+              localStorage.setItem("token", res.data.token);
+              localStorage.setItem("user", res.data.id);
               props.props.history.push(`/chef-profile/${res.data.id}`);
             })
             .catch(err => {
