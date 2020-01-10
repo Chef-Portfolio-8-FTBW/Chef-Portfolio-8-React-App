@@ -464,6 +464,10 @@ label{
   width: 12px;
 }
 
+.location{
+  color: #828080;
+}
+
 .chefProfileName{
   margin: 0;
 }

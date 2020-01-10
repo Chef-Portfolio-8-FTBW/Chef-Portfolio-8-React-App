@@ -7,6 +7,8 @@ import CPUnauthButtons from "../components/CPUnauthButtons";
 import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 
+import location from '../components/icons/location.png';
+
 function ChefProfile(props) {
   const token = localStorage.getItem("token");
   // const Id = JSON.parse(localStorage.getItem("user"));
@@ -47,12 +49,23 @@ function ChefProfile(props) {
           {/* <img>{props.chefs.profileImg}</img> */}
           {chef.map(c => (
             <div>
-              <h2>{c.full_name}</h2>
-              <p>Master Chef</p>
-              <p>{c.Location}</p>
-              <div>
-                <h3>About:</h3>
-                <p>{c.Bio}</p>
+              <div className="chefProfilePersonal">
+                <h2 className="green chefProfileName">{c.full_name}</h2>
+                <p className="chefProfileTitle">Master Chef</p>
+                <p className="chefProfileLocation">
+                  <img className="locationPin" src={location} />
+                  {
+                    !c.Location ?
+                      <p className="location">Location</p>
+                    :
+                      <p className="location">{c.Location}</p>
+                  }
+                </p>
+              </div>
+
+              <div className="chefProfileBio">
+                <h3 className="green about">About:</h3>
+                <p className="about">{c.Bio}</p>
               </div>
             </div>
           ))}
