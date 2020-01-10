@@ -8,6 +8,7 @@ import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 
 import location from '../components/icons/location.png';
+import avi from '../components/icons/avi.png';
 
 function ChefProfile(props) {
   const token = localStorage.getItem("token");
@@ -40,7 +41,7 @@ function ChefProfile(props) {
       });
   }, [id, setChefRecipes]);
 
-  console.log(chef); //the chef is set to the 1st item in the array, why isn't it displaying??
+  console.log("CHEF", chef); //the chef is set to the 1st item in the array, why isn't it displaying??
 
   return (
     <>
@@ -50,6 +51,13 @@ function ChefProfile(props) {
           {chef.map(c => (
             <div>
               <div className="chefProfilePersonal">
+                
+                {
+                  !c.user_picture ?
+                    <img className="chefImage" src={avi} />
+                  :
+                    <img src={c.user_picture} className="chefImage" />
+                }
                 <h2 className="green chefProfileName">{c.full_name}</h2>
                 <p className="chefProfileTitle">Master Chef</p>
                 <p className="chefProfileLocation">

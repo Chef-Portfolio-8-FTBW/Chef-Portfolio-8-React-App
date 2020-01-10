@@ -25,9 +25,17 @@ function Footer() {
       </div>
 
       <div className="iconContainer">
-        <img src={facebook} />
-        <img src={twitter} />
-        <img src={instagram} />
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src={facebook} />
+        </a>
+
+        <a href="https://www.twitter.com/" target="_blank">
+          <img src={twitter} />
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src={instagram} />
+        </a>
       </div>
 
       <div className="copyrightContainer">
