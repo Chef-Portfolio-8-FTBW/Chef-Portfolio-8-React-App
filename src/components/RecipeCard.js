@@ -4,33 +4,32 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 function RecipeCard(props) {
   // const routeToEditForm = () => {
   //   props.history.push(`/edit-recipe/${props.id}`);
   // };
-  const token = localStorage.getItem("token");
-  const user = localStorage.getItem("user");
-  console.log(user);
-  console.log(props.user_id);
-  console.log(token);
+  // const token = localStorage.getItem("token");
+  // const user = localStorage.getItem("user");
+  // console.log(user);
+  // console.log(props.user_id);
 
   // const buttonLogic = () =>
 
-  const deleteRecipe = () => {
-    axios
-      .delete(`https://chef-2.herokuapp.com/api/recipes/delete/${props.id}`)
-      .then(res => {
-        let newRecipes = props.recipes.filter(recipe => {
-          return recipe.id !== props.id;
-        });
-        props.setRecipes(newRecipes);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
+  // const deleteRecipe = () => {
+  //   axios
+  //     .delete(`https://chef-2.herokuapp.com/api/recipes/delete/${props.id}`)
+  //     .then(res => {
+  //       let newRecipes = props.recipes.filter(recipe => {
+  //         return recipe.id !== props.id;
+  //       });
+  //       props.setRecipes(newRecipes);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // };
 
   // const routeToRecipePage = () => {
   //   props.history.push(`/recipe/${props.match.params.id}`);
@@ -46,20 +45,20 @@ function RecipeCard(props) {
           <p>Cook time: {props.cook_time}</p>
         </div>
       </Link>
-      {token ? (
+      {/* {token ? (
         <button className="greenButton" onClick={deleteRecipe}>
           Delete Recipe
         </button>
       ) : (
         ""
-      )}
-      {token ? (
+      )} */}
+      {/* {token ? (
         <Link to={`/edit-recipe/${props.id}`}>
           <button className="greenButton">Edit Recipe</button>
         </Link>
       ) : (
         ""
-      )}
+      )} */}
     </div>
   );
 }

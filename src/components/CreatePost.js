@@ -12,7 +12,6 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 function CreatePost(props) {
-  console.log(props);
   const user = localStorage.getItem("user");
 
   const [recipes, setRecipes] = useState([]);
@@ -43,7 +42,6 @@ function CreatePost(props) {
           }}
           onSubmit={(values, tools) => {
             tools.resetForm();
-            // props.history.push(`/recipe/${props.match.params.id}`);
             axios
               .post("https://chef-2.herokuapp.com/api/recipes/post", values)
               .then(res => {
