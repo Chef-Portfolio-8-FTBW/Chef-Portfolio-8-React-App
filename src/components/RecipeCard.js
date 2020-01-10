@@ -14,6 +14,7 @@ function RecipeCard(props) {
   const user = localStorage.getItem("user");
   console.log(user);
   console.log(props.user_id);
+  console.log(token);
 
   // const buttonLogic = () =>
 
