@@ -4,9 +4,9 @@ import React from "react";
 import Page from "../pages/Page";
 import Recipes from "../components/Recipes";
 
-function GuestHomepage() {
+function GuestHomepage({ history }) {
   return (
-    <Page>
+    <Page history={history}>
       <Recipes />
     </Page>
   );
