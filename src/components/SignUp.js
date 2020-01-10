@@ -14,7 +14,8 @@ const userSchema = Yup.object().shape({
     .min(3),
   confirmPassword: Yup.string()
     .required()
-    .min(3),
+    .min(3)
+    .oneOf([Yup.ref("password")], "Passwords must match"),
   full_name: Yup.string().required(),
   email: Yup.string().email()
 });
