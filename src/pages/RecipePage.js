@@ -31,23 +31,25 @@ function RecipePage(props) {
   return (
     <>
       <Page>
-        <h2>{recipe.recipe_name}</h2>
-        <div>
-          <p>Chef {recipe.chef_name}</p>
+        <div className="recipePageTitleAndName">
+          <h2 className="recipePageTitle">{recipe.recipe_name}</h2>
+          <p className="recipePageName">Chef {recipe.chef_name}</p>
         </div>
-        <img src={recipe.recipe_photo} alt=""></img>
-        <div>
-          <h4>Let's Cook!</h4>
+        <img className="recipePageImage" src={recipe.recipe_photo} alt=""></img>
+        <div className="recipePageTimeContainer">
+          <h4 className="green">Let's Cook!</h4>
           <p>Approximately {recipe.cook_time} </p>
+        </div>
+        <div className="recipePageServingContainer">
           <p>Servings: {recipe.servings}</p>
         </div>
-        <div>
-          <div>
-            <h2>Ingredients</h2>
+        <div className="recipePageInI">
+          <div className="ingredientsContainer">
+            <h2 className="green">Ingredients</h2>
             <p>{recipe.recipe_ingredients}</p>
           </div>
-          <div>
-            <h2>Instructions</h2>
+          <div className="instructionsContainer">
+            <h2 className="green">Instructions</h2>
             <p>{recipe.instructions}</p>
           </div>
         </div>
