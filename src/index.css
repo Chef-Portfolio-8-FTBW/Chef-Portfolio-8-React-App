@@ -9,6 +9,8 @@ body {
   background: #1F1E1E;
   letter-spacing: .75px;
   color: white;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 code {
@@ -159,11 +161,9 @@ a{
   margin-top: 10vh;
 }
 
-.iconContainer p{
+.iconContainer img{
   margin: 0 1vw;
 
-  border: 1px solid white;
-  border-radius: 50%;
   border-color: #828080;
 
   width: 50px;
@@ -370,6 +370,10 @@ label{
   color: #C4C4C4;
 }
 
+.spinner{
+  margin-top: 2vh;
+}
+
 
 
 
@@ -384,7 +388,7 @@ label{
 
 .chefCard{
   width: 300px;
-  height: 300px;
+  
 
   background: #2F2D2D;
   
@@ -397,4 +401,293 @@ label{
 
   border-radius: 50%;
   border: 5px solid #07FE20;
+}
+
+.chefCardAvi{
+  width: 200px;
+}
+
+
+
+
+/*Chef profile cards*/
+
+.chefProfileCardContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #2F2D2D;
+
+  margin: 0 3vw;
+}
+
+.chefProfileCards{
+  margin-bottom: 3vh;
+}
+
+.chefProfilePersonal{
+  margin: 0 auto;
+
+  display: inline-flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.chefProfileBio{
+  width: 15%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.chefProfileTitle{
+  margin: 0;
+}
+
+.chefProfileLocation{
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-style: italic;
+
+  font-size: .75rem;
+}
+
+.locationPin{
+  width: 12px;
+}
+
+.chefProfileName{
+  margin: 0;
+}
+
+.chefProfileBio{
+  margin-top: 5vh;
+}
+
+.chefProfileAbout{
+  margin: 0;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+}
+
+.about{
+  margin: 0;
+}
+
+
+
+
+/*Recipe Card*/
+
+.recipeCardContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #2F2D2D;
+
+  margin: 0 3vw;
+}
+
+.recipeCard{
+  width: 400px;
+
+  background: #1F1E1E;
+
+  border-radius: 8px;
+
+  margin: 1vh 1vw;
+}
+
+.recipeCardContent{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin: 2vh 2vw;
+}
+
+.recipeCardImgAndTitle{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-radius: 8px;
+
+  width: 95%;
+
+  background: #2F2D2D;
+
+  margin: 0 auto;
+  margin-top: 1vh;
+}
+
+.recipeCardImage{
+  width: 90%;
+  margin-bottom: 1vh;
+  border-radius: 8px;
+}
+
+.recipeCardTitle{
+  margin: 1vh;
+  padding-top: 1vh;
+
+  text-transform: capitalize;
+}
+
+.recipeCardInfoContainer{
+  text-align: left;
+  padding: 0 2vh;
+}
+
+.recipeCardChef{
+  margin: 0;
+}
+
+.recipeCardTime{
+  margin: 1vh 0;
+  font-style: italic;
+  color: #C4C4C4;
+
+  display: flex;
+  align-items: center;
+}
+
+.timerIcon{
+  width: 15px;
+  margin: 0vh .5vw 0 1vw;
+}
+
+.recipeCardButtonContainer{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+
+
+
+/*Edit form*/
+
+.editFormContainer input{
+  border: none;
+}
+
+.editFormContainer label{
+  margin-top: 3vh;
+  color: white;
+}
+
+.editFormContainer input{
+  padding: .75vh .75vw;
+
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+
+
+
+/*Recipe Page*/
+
+.recipePageContainer{
+  background: #2F2D2D;
+  padding: 2vh 0;
+}
+
+.recipePageTitleAndName{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  width: 600px;
+
+  margin: 0 auto;
+}
+
+.recipePageName, .recipePageTitle{
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.recipePageTitle{
+  font-size: 2rem;
+}
+
+.recipePageName{
+  margin: 1vh 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipePageAvi{
+  width: 25px;
+
+  margin-right: 1vw;
+}
+
+.recipePageImage{
+  width: 100%;
+
+  margin: 0 auto;
+
+  border-radius: 8px;
+}
+
+.recipePageTimeContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 75%;
+
+  margin: 0 auto;
+  margin-top: 3vh;
+  padding: 1vh 2vw;
+}
+
+.recipePageServingContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  padding: 1vh 2vw;
+}
+
+.recipePageServingContainer p{
+  margin: 0;
+}
+
+.recipePageInI{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+
+  width: 75%;
+
+  background: #1F1E1E;
+
+  margin: 0 auto;
+  padding: 1vh 2vw;
+}
+
+.ingredientsContainer{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.instructionsContainer{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
 }
