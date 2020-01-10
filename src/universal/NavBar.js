@@ -41,9 +41,13 @@ function NavBar(props) {
           </Link>
         )}
 
-        <Link to="/sign-up">
-          <button className="signIn">Join Now</button>
-        </Link>
+        {!token ? (
+          <Link to="/sign-up">
+            <button className="signIn">Join Now</button>
+          </Link>
+        ) : (
+          ""
+        )}
         <p className="hamburger">|||</p>
       </div>
     </nav>

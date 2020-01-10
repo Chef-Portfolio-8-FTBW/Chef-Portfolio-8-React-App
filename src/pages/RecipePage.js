@@ -9,27 +9,39 @@ import Page from "../pages/Page";
 import RPUnauthButtons from "../components/RPUnauthButtons";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router";
 
 import timer from '../components/icons/timer.png';
 import avi from '../components/icons/avi.png';
 
 function RecipePage(props) {
-  console.log(props);
+  const { id } = useParams();
+  const user = Number(localStorage.getItem("user"));
+  console.log(typeof user);
+  const token = localStorage.getItem("token");
   const [recipe, setRecipe] = useState({});
 
   useEffect(() => {
     axios
-      .get(
-        `https://chef-2.herokuapp.com/api/recipes/recipeid/${props.match.params.id}`
-      )
+      .get(`https://chef-2.herokuapp.com/api/recipes/recipeid/${id}`)
       .then(res => {
-        console.log(res);
+        // console.log(res);
         setRecipe(res.data);
       })
       .catch(err => console.log(err));
-  }, [props.match.params.id]);
+  }, [id]);
 
-  const token = localStorage.getItem("token");
+  const deleteRecipe = () => {
+    axios
+      .delete(`https://chef-2.herokuapp.com/api/recipes/delete/${id}`)
+      .then(res => {
+        // console.log(res);
+        props.history.push("/");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
@@ -92,12 +104,21 @@ function RecipePage(props) {
         </div>
 
         <div>
-          {token ? (
-            <Link to={`/chef-profile/${recipe.user_id}`}>
-              <button className="greenButton">Chef Profile</button>
-            </Link>
+          <Link to={`/chef-profile/${recipe.user_id}`}>
+            <button className="greenButton">Chef Profile</button>
+          </Link>
+
+          {token && user === recipe.user_id ? (
+            <>
+              <Link to={`/edit-recipe/${id}`}>
+                <button className="greenButton">Edit Recipe</button>
+              </Link>
+              <button className="greenButton" onClick={deleteRecipe}>
+                Delete Recipe
+              </button>
+            </>
           ) : (
-            <RPUnauthButtons />
+            ""
           )}
         </div>
       </Page>
