@@ -1,15 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 //conditional logic to toggle view of sign in button to disappear once logged in, and for the hamburger icon to appear
 
-function NavBar(props) {
+function NavBar() {
+  const history = useHistory();
   const token = localStorage.getItem("token");
 
   const handleLogOut = () => {
     localStorage.clear();
-    // props.history.push("/");
-    document.location.reload();
+    history.push("/");
+    // document.location.reload();
   };
 
   return (

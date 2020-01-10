@@ -5,10 +5,10 @@ import NavBar from "../universal/NavBar";
 import SearchBar from "../universal/SearchBar";
 import Footer from "../universal/Footer";
 
-function Page({ children }) {
+function Page({ children, history }) {
   return (
     <>
-      <NavBar />
+      <NavBar history={history} />
       <SearchBar />
       {children}
       <Footer />
