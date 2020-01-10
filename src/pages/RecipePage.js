@@ -11,6 +11,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import timer from '../components/icons/timer.png';
+import avi from '../components/icons/avi.png';
 
 function RecipePage(props) {
   console.log(props);
@@ -34,8 +35,11 @@ function RecipePage(props) {
     <>
       <Page className="recipePageContainer">
         <div className="recipePageTitleAndName">
-          <h2 className="recipePageTitle">{recipe.recipe_name}</h2>
-          <p className="recipePageName">Chef {recipe.chef_name}</p>
+          <h2 className="recipePageTitle green">{recipe.recipe_name}</h2>
+          <p className="recipePageName">
+            <img className="recipePageAvi" src={avi} />
+            Chef {recipe.chef_name}
+          </p>
         </div>
 
         <div className="recipePageImageContainer">
@@ -52,6 +56,7 @@ function RecipePage(props) {
         <div className="recipePageServingContainer">
           <p>Servings: {recipe.servings}</p>
         </div>
+
         <div className="recipePageInI">
           <div className="ingredientsContainer">
             <h2 className="green">Ingredients</h2>
@@ -68,7 +73,7 @@ function RecipePage(props) {
               !recipe.instructions ?
                 <p>No instructions yet!</p>
               : 
-                <p>{recipe.instructions}</p>
+                <p className="instructionContent">{recipe.instructions}</p>
             }
           </div>
         </div>

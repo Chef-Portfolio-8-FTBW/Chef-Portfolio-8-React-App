@@ -57,7 +57,7 @@ function ChefProfile(props) {
             </div>
           ))}
 
-          <div>
+          <div className="recipePageContainer">
             {chefRecipes.map(recipe => (
               <RecipeCard
                 key={recipe.id}
@@ -65,6 +65,7 @@ function ChefProfile(props) {
                 chefName={recipe.chef_name}
                 title={recipe.recipe_name}
                 photo={recipe.recipe_photo}
+                cook_time={recipe.cook_time}
               />
             ))}
           </div>

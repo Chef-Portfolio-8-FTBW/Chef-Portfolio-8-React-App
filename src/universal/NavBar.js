@@ -26,8 +26,8 @@ function NavBar(props) {
       <div className="navItems">
         <Link to="/">Recipes</Link>
         <Link to="/meet-the-chefs">Meet The Chefs</Link>
-        {/* <Link to="/">Videos</Link>
-        <Link to="/">FAQ</Link> */}
+        <Link to="/">Videos</Link>
+        <Link to="/">FAQ</Link>
       </div>
 
       <div className="buttonContainer">

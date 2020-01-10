@@ -506,6 +506,7 @@ label{
   border-radius: 8px;
 
   margin: 1vh 1vw;
+  padding: 1vh 0;
 }
 
 .recipeCardContent{
@@ -599,6 +600,11 @@ label{
 .recipePageContainer{
   background: #2F2D2D;
   padding: 2vh 0;
+  margin: 4vh 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .recipePageTitleAndName{
@@ -652,24 +658,29 @@ label{
   justify-content: flex-start;
   align-items: center;
 
-  width: 75%;
+  width: 60%;
 
   margin: 0 auto;
   margin-top: 3vh;
   padding: 1vh 2vw;
 }
 
+.recipePageTimeContainer h4, .recipePageTimeContainer p{
+  margin: 0;
+}
+
 .recipePageServingContainer{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   padding: 1vh 2vw;
 }
 
 .recipePageServingContainer p{
   margin: 0;
+  font-style: italic;
 }
 
 .recipePageInI{
@@ -677,9 +688,9 @@ label{
   flex-flow: column;
   align-items: flex-start;
 
-  width: 75%;
+  width: 60%;
 
-  background: #1F1E1E;
+  background: #2F2D2D;
 
   margin: 0 auto;
   padding: 1vh 2vw;
@@ -695,4 +706,8 @@ label{
   display: flex;
   flex-flow: column;
   align-items: flex-start;
+}
+
+.instructionContent{
+  text-align: left;
 }
