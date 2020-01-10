@@ -20,7 +20,6 @@ const RecipeEditForm = props => {
     axiosWithAuth()
       .get(`/api/recipes/recipeid/${id}`)
       .then(res => {
-        console.log(res);
         setEditRecipe(res.data);
       });
   }, [id]);
@@ -37,7 +36,6 @@ const RecipeEditForm = props => {
     axiosWithAuth()
       .put(`/api/recipes/update/${id}`, editRecipe)
       .then(res => {
-        console.log(res);
         props.history.push(`/recipe/${id}`);
       })
       .catch(err => {
@@ -53,7 +51,6 @@ const RecipeEditForm = props => {
           <input
             name="recipe_name"
             type="text"
-            placeholder="Squash and Feta Flatbread"
             value={editRecipe.recipe_name}
             onChange={handleChange}
           />
@@ -64,7 +61,6 @@ const RecipeEditForm = props => {
           <input
             name="recipe_ingredients"
             as="textarea"
-            placeholder="List of ingredients needed"
             value={editRecipe.recipe_ingredients}
             onChange={handleChange}
           />
@@ -75,7 +71,6 @@ const RecipeEditForm = props => {
           <input
             name="cook_time"
             type="text"
-            placeholder="35 minutes"
             value={editRecipe.cook_time}
             onChange={handleChange}
           />
@@ -86,7 +81,6 @@ const RecipeEditForm = props => {
           <input
             name="prep_time"
             type="text"
-            placeholder="20 minutes"
             value={editRecipe.prep_time}
             onChange={handleChange}
           />
@@ -97,7 +91,6 @@ const RecipeEditForm = props => {
           <input
             name="instructions"
             as="textarea"
-            placeholder="List of instructions"
             value={editRecipe.instructions}
             onChange={handleChange}
           />
@@ -108,7 +101,6 @@ const RecipeEditForm = props => {
           <input
             name="servings"
             type="text"
-            placeholder="2"
             value={editRecipe.servings}
             onChange={handleChange}
           />

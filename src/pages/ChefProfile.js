@@ -20,7 +20,6 @@ function ChefProfile(props) {
     axios
       .get(`https://chef-2.herokuapp.com/api/user/user/${id}`)
       .then(res => {
-        console.log(res);
         setChef(res.data);
       })
       .catch(err => console.log(err));
@@ -30,7 +29,6 @@ function ChefProfile(props) {
     axios
       .get(`https://chef-2.herokuapp.com/api/recipes/user/${id}`)
       .then(res => {
-        console.log(res);
         setChefRecipes(res.data);
       })
       .catch(err => {
@@ -38,15 +36,13 @@ function ChefProfile(props) {
       });
   }, [id, setChefRecipes]);
 
-  console.log(chef); //the chef is set to the 1st item in the array, why isn't it displaying??
-
   return (
     <>
       <Page>
         <div>
           {/* <img>{props.chefs.profileImg}</img> */}
           {chef.map(c => (
-            <div>
+            <div key={c.id}>
               <h2>{c.full_name}</h2>
               <p>Master Chef</p>
               <p>{c.Location}</p>

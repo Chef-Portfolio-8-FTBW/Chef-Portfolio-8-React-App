@@ -5,8 +5,10 @@ import React, { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 function Recipes() {
+  const token = localStorage.getItem("token");
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -95,20 +97,13 @@ function Recipes() {
         })
       )}
 
-      {/* <button onClick={props.getRecipes}>Show Me Rick</button> */}
-      {/* {recipes.map(recipe => (
-        <RecipeCard
-          key={recipe.id}
-          chefName={recipe.chef_name}
-          title={recipe.recipe_name}
-          photo={recipe.recipe_photo}
-          // ingredients={recipe.recipe_ingredients}
-          // cookTime={recipe.cook_time}
-          // prepTime={recipe.prep_time}
-          // instructions={recipe.instructions}
-          // servings={recipe.servings}
-        />
-      ))} */}
+      {token ? (
+        <Link to={`/create-post`}>
+          <button className="greenButton">Create Post</button>
+        </Link>
+      ) : (
+        ""
+      )}
     </>
   );
 }
