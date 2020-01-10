@@ -45,7 +45,7 @@ const RecipeEditForm = props => {
 
   return (
     <Page>
-      <form onSubmit={handleSubmit} className="formContainer">
+      <form onSubmit={handleSubmit} className="formContainer editFormContainer">
         <label>
           Recipe name:
           <input

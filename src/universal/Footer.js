@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import facebook from '../components/icons/facebook.png';
+import twitter from '../components/icons/twitter.png';
+import instagram from '../components/icons/instagram.png';
+
 function Footer() {
   return (
     <footer className="footer">
@@ -21,9 +25,17 @@ function Footer() {
       </div>
 
       <div className="iconContainer">
-        <p>F</p>
-        <p>T</p>
-        <p>I</p>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src={facebook} />
+        </a>
+
+        <a href="https://www.twitter.com/" target="_blank">
+          <img src={twitter} />
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src={instagram} />
+        </a>
       </div>
 
       <div className="copyrightContainer">

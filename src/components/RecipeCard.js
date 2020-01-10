@@ -4,7 +4,10 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
+import timer from './icons/timer.png';
+
+
 
 function RecipeCard(props) {
   // const routeToEditForm = () => {
@@ -36,15 +39,40 @@ function RecipeCard(props) {
   // };
 
   return (
-    <div>
+    <div className="recipeCard">
       <Link to={`/recipe/${props.id}`}>
-        <div>
-          <img src={props.photo} alt="" />
-          <h2>{props.title}</h2>
-          <p>Chef: {props.chefName}</p>
-          <p>Cook time: {props.cook_time}</p>
+        <div >
+          <div className="recipeCardImgAndTitle">
+              <h2 className="recipeCardTitle">{props.title}</h2>
+              <img className="recipeCardImage" src={props.photo} alt="" />
+          </div>
+          <div className="recipeCardContent">
+            <p className="recipeCardChef">Chef: {props.chefName}</p>
+            <p className="recipeCardTime">
+              <img className="timerIcon" src={timer} />
+              {props.cook_time}
+            </p>
+          </div>
         </div>
       </Link>
+
+      <div className="recipeCardButtonContainer">
+        {token ? (
+          <button className="redButton" onClick={deleteRecipe}>
+            Delete Recipe
+          </button>
+        ) : (
+          ""
+        )}
+        {token ? (
+          <Link to={`/edit-recipe/${props.id}`}>
+            <button className="greenButton">Edit Recipe</button>
+          </Link>
+        ) : (
+          ""
+        )}
+      </div>
+
       {/* {token ? (
         <button className="greenButton" onClick={deleteRecipe}>
           Delete Recipe
@@ -59,6 +87,7 @@ function RecipeCard(props) {
       ) : (
         ""
       )} */}
+
     </div>
   );
 }
