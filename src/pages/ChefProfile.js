@@ -54,14 +54,14 @@ function ChefProfile(props) {
                 )}
                 <h2 className="green chefProfileName">{c.full_name}</h2>
                 <p className="chefProfileTitle">Master Chef</p>
-                <p className="chefProfileLocation">
+                <div className="chefProfileLocation">
                   <img className="locationPin" src={location} alt="" />
                   {!c.Location ? (
                     <p className="location">Location</p>
                   ) : (
                     <p className="location">{c.Location}</p>
                   )}
-                </p>
+                </div>
               </div>
 
               <div className="chefProfileBio">
