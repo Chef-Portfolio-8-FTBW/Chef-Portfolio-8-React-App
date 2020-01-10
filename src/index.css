@@ -634,6 +634,11 @@ label{
   margin-right: 1vw;
 }
 
+.recipePageImageContainer{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .recipePageImage{
   width: 100%;
 

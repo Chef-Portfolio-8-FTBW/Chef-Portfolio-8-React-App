@@ -5,6 +5,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import timer from './icons/timer.png';
 
 function RecipeCard(props) {
   // const routeToEditForm = () => {
@@ -46,7 +47,10 @@ function RecipeCard(props) {
           </div>
           <div className="recipeCardContent">
             <p className="recipeCardChef">Chef: {props.chefName}</p>
-            <p className="recipeCardTime">Cook time: {props.cook_time}</p>
+            <p className="recipeCardTime">
+              <img className="timerIcon" src={timer} />
+              {props.cook_time}
+            </p>
           </div>
         </div>
       </Link>
