@@ -11,11 +11,7 @@ function RecipeCard(props) {
   //   props.history.push(`/edit-recipe/${props.id}`);
   // };
   const token = localStorage.getItem("token");
-  const user = localStorage.getItem("user");
-  console.log(user);
-  console.log(props.user_id);
-
-  // const buttonLogic = () =>
+  // const user = localStorage.getItem("user");
 
   const deleteRecipe = () => {
     axios
