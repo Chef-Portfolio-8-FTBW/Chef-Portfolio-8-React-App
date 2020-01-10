@@ -5,19 +5,17 @@
 
 import React, { useEffect, useState } from "react";
 import Page from "../pages/Page";
-
-import RPUnauthButtons from "../components/RPUnauthButtons";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 
-import timer from '../components/icons/timer.png';
-import avi from '../components/icons/avi.png';
+import timer from "../components/icons/timer.png";
+import avi from "../components/icons/avi.png";
 
 function RecipePage(props) {
   const { id } = useParams();
   const user = Number(localStorage.getItem("user"));
-  console.log(typeof user);
+
   const token = localStorage.getItem("token");
   const [recipe, setRecipe] = useState({});
 
@@ -49,20 +47,24 @@ function RecipePage(props) {
         <div className="recipePageTitleAndName">
           <h2 className="recipePageTitle green">{recipe.recipe_name}</h2>
           <p className="recipePageName">
-            <img className="recipePageAvi" src={avi} />
+            <img className="recipePageAvi" src={avi} alt="" />
             Chef {recipe.chef_name}
           </p>
         </div>
 
         <div className="recipePageImageContainer">
-          <img className="recipePageImage" src={recipe.recipe_photo} alt=""></img>
+          <img
+            className="recipePageImage"
+            src={recipe.recipe_photo}
+            alt=""
+          ></img>
         </div>
 
         <div className="recipePageTimeContainer">
           <h4 className="green">Let's Cook!</h4>
           <p>
-            <img className="timerIcon" src={timer} /> 
-            {recipe.cook_time} 
+            <img className="timerIcon" src={timer} alt="" />
+            {recipe.cook_time}
           </p>
         </div>
         <div className="recipePageServingContainer">
@@ -72,21 +74,19 @@ function RecipePage(props) {
         <div className="recipePageInI">
           <div className="ingredientsContainer">
             <h2 className="green">Ingredients</h2>
-            {
-              !recipe.recipe_ingredients ?
-                <p>No ingredients yet!</p>
-              : 
-                <p>{recipe.recipe_ingredients}</p>
-            }
+            {!recipe.recipe_ingredients ? (
+              <p>No ingredients yet!</p>
+            ) : (
+              <p>{recipe.recipe_ingredients}</p>
+            )}
           </div>
           <div className="instructionsContainer">
             <h2 className="green">Instructions</h2>
-            {
-              !recipe.instructions ?
-                <p>No instructions yet!</p>
-              : 
-                <p className="instructionContent">{recipe.instructions}</p>
-            }
+            {!recipe.instructions ? (
+              <p>No instructions yet!</p>
+            ) : (
+              <p className="instructionContent">{recipe.instructions}</p>
+            )}
           </div>
         </div>
         <div>
@@ -113,7 +113,7 @@ function RecipePage(props) {
               <Link to={`/edit-recipe/${id}`}>
                 <button className="greenButton">Edit Recipe</button>
               </Link>
-              <button className="greenButton" onClick={deleteRecipe}>
+              <button className="redButton" onClick={deleteRecipe}>
                 Delete Recipe
               </button>
             </>

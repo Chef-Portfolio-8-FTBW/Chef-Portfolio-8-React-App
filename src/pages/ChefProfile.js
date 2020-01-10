@@ -7,8 +7,8 @@ import CPUnauthButtons from "../components/CPUnauthButtons";
 import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 
-import location from '../components/icons/location.png';
-import avi from '../components/icons/avi.png';
+import location from "../components/icons/location.png";
+import avi from "../components/icons/avi.png";
 
 function ChefProfile(props) {
   const token = localStorage.getItem("token");
@@ -45,33 +45,28 @@ function ChefProfile(props) {
         <div>
           {/* <img>{props.chefs.profileImg}</img> */}
           {chef.map(c => (
-
             <div key={c.id}>
               <div className="chefProfilePersonal">
-                
-                {
-                  !c.user_picture ?
-                    <img className="chefImage" src={avi} />
-                  :
-                    <img src={c.user_picture} className="chefImage" />
-                }
+                {!c.user_picture ? (
+                  <img className="chefImage" src={avi} alt="" />
+                ) : (
+                  <img src={c.user_picture} className="chefImage" alt="" />
+                )}
                 <h2 className="green chefProfileName">{c.full_name}</h2>
                 <p className="chefProfileTitle">Master Chef</p>
                 <p className="chefProfileLocation">
-                  <img className="locationPin" src={location} />
-                  {
-                    !c.Location ?
-                      <p className="location">Location</p>
-                    :
-                      <p className="location">{c.Location}</p>
-                  }
+                  <img className="locationPin" src={location} alt="" />
+                  {!c.Location ? (
+                    <p className="location">Location</p>
+                  ) : (
+                    <p className="location">{c.Location}</p>
+                  )}
                 </p>
               </div>
 
               <div className="chefProfileBio">
                 <h3 className="green about">About:</h3>
                 <p className="about">{c.Bio}</p>
-
               </div>
             </div>
           ))}
