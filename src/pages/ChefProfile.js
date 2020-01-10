@@ -48,7 +48,7 @@ function ChefProfile(props) {
           {chef.map(c => (
             <div>
               <h2>{c.full_name}</h2>
-              <p>Master Chef Extraordinaire</p>
+              <p>Master Chef</p>
               <p>{c.Location}</p>
               <div>
                 <h3>About:</h3>
