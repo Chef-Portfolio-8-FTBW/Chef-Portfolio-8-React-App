@@ -5,9 +5,8 @@
 
 import React, { useEffect, useState } from "react";
 import Page from "../pages/Page";
-import RPAuthButtons from "../components/RPAuthButtons";
-import RPUnauthButtons from "../components/RPUnauthButtons";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function RecipePage(props) {
   console.log(props);
@@ -64,7 +63,11 @@ function RecipePage(props) {
           </div>
         </div>
 
-        <div>{token ? <RPAuthButtons /> : <RPUnauthButtons />}</div>
+        <div>
+          <Link to={`/chef-profile/${recipe.user_id}`}>
+            <button className="greenButton">Chef Profile</button>
+          </Link>
+        </div>
       </Page>
     </>
   );
