@@ -9,11 +9,9 @@ function CPAuthButtons(props) {
 
   return (
     <div>
-
-      <button className="greenButton" onClick={routeToCreatePost}>
+      <button className="create-button" onClick={routeToCreatePost}>
         Create Post
       </button>
-
     </div>
   );
 }

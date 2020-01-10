@@ -75,35 +75,35 @@ function Recipes() {
       </div>
 
       <div className="recipeCardContainer">
-        {
-            loading || !searchResults.length ? (
-            <div>
-              <Loader type="TailSpin" color="#07FE20" height={50} width={50} />
-              <p>Nothing to display...</p>
-            </div>
-          ) : (
-            searchResults.map(recipe => {
-              return (
-                <RecipeCard
-                  key={recipe.id}
-                  id={recipe.id}
-                  chefName={recipe.chef_name}
-                  title={recipe.recipe_name}
-                  photo={recipe.recipe_photo}
-                  cook_time={recipe.cook_time}
-                  user_id={recipe.user_id}
-                  setRecipes={setRecipes}
-                  recipes={recipes}
-                />
-              );
-            })
-          )
-        }
+        {loading || !searchResults.length ? (
+          <div>
+            <Loader type="TailSpin" color="#07FE20" height={50} width={50} />
+            <p>Nothing to display...</p>
+          </div>
+        ) : (
+          searchResults.map(recipe => {
+            return (
+              <RecipeCard
+                key={recipe.id}
+                id={recipe.id}
+                chefName={recipe.chef_name}
+                title={recipe.recipe_name}
+                photo={recipe.recipe_photo}
+                cook_time={recipe.cook_time}
+                user_id={recipe.user_id}
+                setRecipes={setRecipes}
+                recipes={recipes}
+              />
+            );
+          })
+        )}
       </div>
 
       {token ? (
         <Link to={`/create-post`}>
-          <button className="greenButton">Create Post</button>
+          <button className="greenButton" className="create-button">
+            Create Post
+          </button>
         </Link>
       ) : (
         ""

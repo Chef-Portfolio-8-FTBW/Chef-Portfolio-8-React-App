@@ -60,7 +60,7 @@ const RecipeEditForm = props => {
           Ingredients:
           <input
             name="recipe_ingredients"
-            as="textarea"
+            type="textarea"
             value={editRecipe.recipe_ingredients}
             onChange={handleChange}
           />
@@ -90,7 +90,7 @@ const RecipeEditForm = props => {
           Instructions:
           <input
             name="instructions"
-            as="textarea"
+            type="textarea"
             value={editRecipe.instructions}
             onChange={handleChange}
           />
