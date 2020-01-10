@@ -1,34 +1,33 @@
 body {
   margin: 0;
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #1F1E1E;
-  letter-spacing: .75px;
+  background: #1f1e1e;
+  letter-spacing: 0.75px;
   color: white;
   max-width: 100%;
   box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
-a{
+a {
   color: white;
   text-decoration: none;
 }
 
-.greenButton{
+.greenButton {
   margin-right: 2vw;
   padding: 0.25rem 1rem;
 
-  background: #07FE20;
+  background: #07fe20;
   font-weight: 600;
 
   cursor: pointer;
@@ -38,7 +37,7 @@ a{
   border-radius: 5px;
 }
 
-.redButton{
+.redButton {
   margin-right: 2vw;
   padding: 0.25rem 1rem;
 
@@ -53,7 +52,9 @@ a{
   border-radius: 5px;
 }
 
-.navItems a, .footerNavItems a, .logoContainer a{
+.navItems a,
+.footerNavItems a,
+.logoContainer a {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -61,47 +62,48 @@ a{
 
 /*Underline animation for links within the nav and footer*/
 
-.navItems a::after, .footerNavItems a::after{
+.navItems a::after,
+.footerNavItems a::after {
   content: "";
   display: block;
   width: 0;
-  border-bottom: 1px solid #07FE20;
-  transition: .3s;
+  border-bottom: 1px solid #07fe20;
+  transition: 0.3s;
 }
 
-.navItems a:hover::after, .footerNavItems a:hover::after{
+.navItems a:hover::after,
+.footerNavItems a:hover::after {
   width: 100%;
 }
 
-
 /*===== Nav ====*/
 
-.green{
-  color: #07FE20;
+.green {
+  color: #07fe20;
 }
 
-.nav{
-  background: #1F1E1E;
+.nav {
+  background: #1f1e1e;
   color: white;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: .5vh 2vw;
+  padding: 0.5vh 2vw;
 }
 
-.buttonContainer{
+.buttonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.signIn{
+.signIn {
   margin-right: 2vw;
   padding: 0.25rem 1rem;
 
-  background: #07FE20;
+  background: #07fe20;
   font-weight: 600;
 
   cursor: pointer;
@@ -111,30 +113,27 @@ a{
   border-radius: 5px;
 }
 
-.navItems{
+.navItems {
   display: flex;
 }
 
-.navItems a{
+.navItems a {
   margin: 0 2vw;
 }
 
-.hamburger{
+.hamburger {
   transform: rotate(90deg);
   cursor: pointer;
 }
 
-.logo{
+.logo {
   padding: 1.5vh 0;
 }
 
-
-
-
 /*===== Footer ======*/
 
-.footer{
-  background: #2F2D2D;
+.footer {
+  background: #2f2d2d;
   color: white;
   margin-top: 7vh;
   height: 65vh;
@@ -145,23 +144,23 @@ a{
   align-items: center;
 }
 
-.footerNavItems a{
+.footerNavItems a {
   margin: 0 2vw;
 }
 
-.footerNavItems{
+.footerNavItems {
   margin: 3vh 0;
 
   display: flex;
 }
 
-.iconContainer{
+.iconContainer {
   display: flex;
 
   margin-top: 10vh;
 }
 
-.iconContainer img{
+.iconContainer img {
   margin: 0 1vw;
 
   border-color: #828080;
@@ -176,21 +175,18 @@ a{
   cursor: pointer;
 }
 
-.copyrightContainer p{
+.copyrightContainer p {
   color: #828080;
   margin-top: 3vh;
 }
 
-.footerLogo{
+.footerLogo {
   font-size: 2rem;
 }
 
-
-
-
 /*Formik styling*/
 
-.formContainer{
+.formContainer {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -203,23 +199,23 @@ a{
   border: 2px solid #828080;
   border-radius: 8px;
 
-  background: #2F2D2D;
-  
+  background: #2f2d2d;
+
   width: 225px;
 }
 
-.submitButton{
+.submitButton {
   width: 100px;
 
   margin-top: 5vh;
-  padding: .75vh 2vw;
+  padding: 0.75vh 2vw;
 
   border: none;
   border-radius: 3px;
   outline: none;
   cursor: pointer;
 
-  background: #07FE20;
+  background: #07fe20;
   color: black;
 
   font-weight: 600;
@@ -231,19 +227,19 @@ a{
   align-items: center;
 }
 
-.submitButton:active{
+.submitButton:active {
   background: rgb(0, 94, 0);
 }
 
-.signUpSwitch{
+.signUpSwitch {
   border: none;
   display: block;
 
   background: none;
   color: #828080;
 
-  font-size: .8rem;
-  letter-spacing: .75px;
+  font-size: 0.8rem;
+  letter-spacing: 0.75px;
 
   margin-bottom: 2vh;
 
@@ -252,14 +248,14 @@ a{
   text-decoration: underline;
 }
 
-.guestSignIn{
+.guestSignIn {
   border: none;
 
   background: none;
   color: #828080;
 
-  font-size: .8rem;
-  letter-spacing: .75px;
+  font-size: 0.8rem;
+  letter-spacing: 0.75px;
 
   margin-top: 1vh;
 
@@ -268,27 +264,27 @@ a{
   text-decoration: underline;
 }
 
-label{
+label {
   margin-top: 3vh;
   color: white;
 }
 
-.input{
-  padding: .75vh .75vw;
+.input {
+  padding: 0.75vh 0.75vw;
 
   border-radius: 5px;
   border: 1px solid gray;
   outline: none;
 }
 
-.red{
+.red {
   font-size: 0.85rem;
 
   border: 1px solid rgb(151, 151, 151);
   border-radius: 2px;
 
-  margin-top: .5vh;
-  padding: .25vh .5vw;
+  margin-top: 0.5vh;
+  padding: 0.25vh 0.5vw;
 
   font-style: italic;
 
@@ -297,137 +293,125 @@ label{
   font-weight: 500;
 }
 
-.inputBio{
+.inputBio {
   height: 100px;
   width: 215px;
 }
 
-
-
-
 /*Create Post styling*/
 
-.cpForm input, textarea{
-  padding: .75vh .75vw;
+.cpForm input,
+textarea {
+  padding: 0.75vh 0.75vw;
 
   border-radius: 5px;
   border: 1px solid gray;
   outline: none;
 }
 
-.cpForm textarea{
+.cpForm textarea {
   height: 100px;
   width: 215px;
 }
 
-
-
-
 /*Search Bar*/
 
-.searchBarTwo{
+.searchBarTwo {
   display: none;
 }
 
-.searchBar{
+.searchBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: #2F2D2D;
+  background: #2f2d2d;
   color: white;
-  
+
   padding: 0 1vw;
   margin-bottom: 7vh;
 }
 
-.searchFormDesc{
+.searchFormDesc {
   width: 40%;
 }
 
-.searchForm{
+.searchForm {
   width: 55%;
 }
 
-.searchBar p{
-  font-size: .85rem;
+.searchBar p {
+  font-size: 0.85rem;
   font-style: italic;
 }
 
-.searchBar input{
+.searchBar input {
   width: 95%;
 
   border: none;
   border-radius: 3px;
 
-  padding: .5vh .75vw;
+  padding: 0.5vh 0.75vw;
 
   background: rgb(95, 91, 91);
   color: white;
 }
 
-.searchBar input::placeholder{
-  color: #C4C4C4;
+.searchBar input::placeholder {
+  color: #c4c4c4;
 }
 
-.spinner{
+.spinner {
   margin-top: 2vh;
 }
 
-
-
-
 /*Chef Card*/
 
-.chefCardContainer{
+.chefCardContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 
-.chefCard{
+.chefCard {
   width: 300px;
-  
 
-  background: #2F2D2D;
-  
+  background: #2f2d2d;
+
   padding: 2vh 1vw;
   margin: 2vh 2vw;
 }
 
-.chefImage{
+.chefImage {
   width: 200px;
 
   border-radius: 50%;
-  border: 5px solid #07FE20;
+  border: 5px solid #07fe20;
 }
 
-.chefCardAvi{
+.chefCardAvi {
   width: 200px;
 }
 
-
-
-
 /*Chef profile cards*/
 
-.chefProfileCardContainer{
+.chefProfileCardContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
 
-  background: #2F2D2D;
+  background: #2f2d2d;
 
   margin: 0 3vw;
 }
 
-.chefProfileCards{
+.chefProfileCards {
   margin-bottom: 3vh;
 }
 
-.chefProfilePersonal{
+.chefProfilePersonal {
   margin: 0 auto;
 
   display: inline-flex;
@@ -435,7 +419,7 @@ label{
   align-items: flex-start;
 }
 
-.chefProfileBio{
+.chefProfileBio {
   width: 15%;
   margin: 0 auto;
 
@@ -444,11 +428,11 @@ label{
   align-items: center;
 }
 
-.chefProfileTitle{
+.chefProfileTitle {
   margin: 0;
 }
 
-.chefProfileLocation{
+.chefProfileLocation {
   margin: 0;
 
   display: flex;
@@ -457,55 +441,52 @@ label{
 
   font-style: italic;
 
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
-.locationPin{
+.locationPin {
   width: 12px;
 }
 
-.location{
+.location {
   color: #828080;
 }
 
-.chefProfileName{
+.chefProfileName {
   margin: 0;
 }
 
-.chefProfileBio{
+.chefProfileBio {
   margin-top: 5vh;
 }
 
-.chefProfileAbout{
+.chefProfileAbout {
   margin: 0;
   margin-bottom: 3vh;
   margin-top: 2vh;
 }
 
-.about{
+.about {
   margin: 0;
 }
 
-
-
-
 /*Recipe Card*/
 
-.recipeCardContainer{
+.recipeCardContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
 
-  background: #2F2D2D;
+  background: #2f2d2d;
 
   margin: 0 3vw;
 }
 
-.recipeCard{
+.recipeCard {
   width: 400px;
 
-  background: #1F1E1E;
+  background: #1f1e1e;
 
   border-radius: 8px;
 
@@ -513,96 +494,90 @@ label{
   padding: 1vh 0;
 }
 
-.recipeCardContent{
+.recipeCardContent {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   margin: 2vh 2vw;
 }
 
-.recipeCardImgAndTitle{
+.recipeCardImgAndTitle {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-radius: 8px;
 
   width: 95%;
 
-  background: #2F2D2D;
+  background: #2f2d2d;
 
   margin: 0 auto;
   margin-top: 1vh;
 }
 
-.recipeCardImage{
+.recipeCardImage {
   width: 90%;
   margin-bottom: 1vh;
   border-radius: 8px;
 }
 
-.recipeCardTitle{
+.recipeCardTitle {
   margin: 1vh;
   padding-top: 1vh;
 
   text-transform: capitalize;
 }
 
-.recipeCardInfoContainer{
+.recipeCardInfoContainer {
   text-align: left;
   padding: 0 2vh;
 }
 
-.recipeCardChef{
+.recipeCardChef {
   margin: 0;
 }
 
-.recipeCardTime{
+.recipeCardTime {
   margin: 1vh 0;
   font-style: italic;
-  color: #C4C4C4;
+  color: #c4c4c4;
 
   display: flex;
   align-items: center;
 }
 
-.timerIcon{
+.timerIcon {
   width: 15px;
-  margin: 0vh .5vw 0 1vw;
+  margin: 0vh 0.5vw 0 1vw;
 }
 
-.recipeCardButtonContainer{
+.recipeCardButtonContainer {
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
 
-
-
-
 /*Edit form*/
 
-.editFormContainer input{
+.editFormContainer input {
   border: none;
 }
 
-.editFormContainer label{
+.editFormContainer label {
   margin-top: 3vh;
   color: white;
 }
 
-.editFormContainer input{
-  padding: .75vh .75vw;
+.editFormContainer input {
+  padding: 0.75vh 0.75vw;
 
   border-radius: 5px;
   border: 1px solid gray;
   outline: none;
 }
 
-
-
-
 /*Recipe Page*/
 
-.recipePageContainer{
-  background: #2F2D2D;
+.recipePageContainer {
+  background: #2f2d2d;
   padding: 2vh 0;
   margin: 4vh 0;
 
@@ -611,7 +586,7 @@ label{
   align-items: center;
 }
 
-.recipePageTitleAndName{
+.recipePageTitleAndName {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
@@ -621,16 +596,17 @@ label{
   margin: 0 auto;
 }
 
-.recipePageName, .recipePageTitle{
+.recipePageName,
+.recipePageTitle {
   text-transform: capitalize;
   margin: 0;
 }
 
-.recipePageTitle{
+.recipePageTitle {
   font-size: 2rem;
 }
 
-.recipePageName{
+.recipePageName {
   margin: 1vh 0;
 
   display: flex;
@@ -638,18 +614,18 @@ label{
   align-items: center;
 }
 
-.recipePageAvi{
+.recipePageAvi {
   width: 25px;
 
   margin-right: 1vw;
 }
 
-.recipePageImageContainer{
+.recipePageImageContainer {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.recipePageImage{
+.recipePageImage {
   width: 100%;
 
   margin: 0 auto;
@@ -657,7 +633,7 @@ label{
   border-radius: 8px;
 }
 
-.recipePageTimeContainer{
+.recipePageTimeContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -669,11 +645,12 @@ label{
   padding: 1vh 2vw;
 }
 
-.recipePageTimeContainer h4, .recipePageTimeContainer p{
+.recipePageTimeContainer h4,
+.recipePageTimeContainer p {
   margin: 0;
 }
 
-.recipePageServingContainer{
+.recipePageServingContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -682,36 +659,55 @@ label{
   padding: 1vh 2vw;
 }
 
-.recipePageServingContainer p{
+.recipePageServingContainer p {
   margin: 0;
   font-style: italic;
 }
 
-.recipePageInI{
+.recipePageInI {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
 
   width: 60%;
 
-  background: #2F2D2D;
+  background: #2f2d2d;
 
   margin: 0 auto;
   padding: 1vh 2vw;
 }
 
-.ingredientsContainer{
+.ingredientsContainer {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
 }
 
-.instructionsContainer{
+.instructionsContainer {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
 }
 
-.instructionContent{
+.instructionContent {
   text-align: left;
+}
+
+.create-button {
+  width: 200px;
+
+  margin-top: 5vh;
+  padding: 0.75vh 2vw;
+
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+
+  background: #07fe20;
+  color: black;
+
+  font-weight: 600;
+  font-family: helvetica;
+  font-size: 1.05rem;
 }

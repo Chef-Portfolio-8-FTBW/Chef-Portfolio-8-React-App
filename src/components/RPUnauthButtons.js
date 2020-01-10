@@ -5,10 +5,10 @@ function RPUnauthButtons() {
   return (
     <div>
       <Link to="/">
-        <button>Return to Recipes</button>
+        <button className="greenButton">Return to Recipes</button>
       </Link>
       <Link to="/meet-the-chefs">
-        <button>Return to Chefs</button>
+        <button className="greenButton">Return to Chefs</button>
       </Link>
     </div>
   );
